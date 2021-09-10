@@ -1,1 +1,46 @@
 <p>calculators works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="base">
+        <div class="maindisplay" id="maindisplay">
+          <div class="subdisplay">{{ calculators[0].subDisplayText }}</div>
+          {{ calculators[0].mainDisplayText }}
+        </div>
+        <div class="keypad">
+          <table style="width: 100%;">
+            <tr>
+              <td class="keys ackey" colspan="3" (click)="allClear()" id="btn-key-clear">AC</td>
+            </tr>
+            <tr>
+              <td class="keys numkey" (click)="pressKey('7')" id="btn-key-7">7</td>
+              <td class="keys numkey" (click)="pressKey('8')" id="btn-key-8">8</td>
+              <td class="keys numkey" (click)="pressKey('9')" id="btn-key-9">9</td>
+              <td class="keys opkey" (click)="pressKey('x')" id="btn-key-multiply">x</td>
+            </tr>
+            <tr>
+              <td class="keys numkey" (click)="pressKey('4')" id="btn-key-4">4</td>
+              <td class="keys numkey" (click)="pressKey('5')" id="btn-key-5">5</td>
+              <td class="keys numkey" (click)="pressKey('6')" id="btn-key-6">6</td>
+              <td class="keys opkey" (click)="pressKey('-')" id="btn-key-subtract">-</td>
+            </tr>
+            <tr>
+              <td class="keys numkey" (click)="pressKey('3')" id="btn-key-3">3</td>
+              <td class="keys numkey" (click)="pressKey('2')" id="btn-key-2">2</td>
+              <td class="keys numkey" (click)="pressKey('1')" id="btn-key-1">1</td>
+              <td class="keys opkey" (click)="pressKey('+')" id="btn-key-add">+</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="keys numkey" (click)="pressKey('0')" id="btn-key-0">0</td>
+              <!--              <td class="keys numkey" (click)="pressKey('.')">.</td>-->
+              <td class="keys equalkey" (click)="getAnswer()" id="btn-key-equals">=</td>
+              <td class="keys opkey" colspan="1" (click)="pressKey('/')" id="btn-key-divide">/</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
